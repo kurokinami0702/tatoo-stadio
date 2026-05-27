@@ -1,0 +1,435 @@
+@charset "utf-8";
+* {
+box-sizing: border-box;
+}
+html ,body{
+    margin: 0;
+    padding: 0;
+    height:100%;
+    width: 100%;
+    -webkit-text-size-adjust: 100%; /* iOS Safariの自動拡大防止 */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    font-family: 'Times New Roman';
+    background-image: url(../shop.png/backgroundimg_header.png);
+    background-color: black;
+    color: aliceblue;
+    font-weight: bold;
+}
+.header-title{
+    height: 100px;
+    display: flex;
+    align-items: center; 
+    font-size: 30px;
+    padding: 0px 20px;
+    float: left;
+}
+.nav-wrapper{
+    display: none;
+}
+.header-menu{
+    height:100px;
+    font-size: 20px;
+    float: right;
+}
+
+.header-menu ul{
+    margin: 0 0;
+    height:100px;
+    align-items: center; 
+    display: flex;
+    list-style: none;
+}
+.header-menu li{
+    margin-top: 0px;
+    padding: 0px 20px;
+}
+
+.main-video{
+    top:100px;
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+.back-video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(2px); 
+    object-fit: cover;
+    z-index: -1;
+    font-size: 16px;
+}
+
+.video-text{
+    width: 100%;
+    font-weight: bold;
+    position: absolute;
+    font-family: 'arial black';
+    text-align: center;
+    font-size: 300%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1
+}
+.background{
+    background-image: url(../shop.png/background-white-pc.png);
+    background-size: 100% auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+/*タイトル(共通設定)-文字設定-*/
+.title{
+    font-size: 70px;
+    letter-spacing: 0.3em;
+    font-family: 'Times New Roman';
+    text-align: center;
+    font-weight: bold;
+    padding: 0 0;
+    margin: 0 0;
+}
+.design{
+    width: 100%;
+    text-align: center;
+}
+.design img{
+    width: 35%;
+    text-align: center;
+}
+.gallery {
+    margin-top: 100px;
+    padding: 100px 0px;
+    height: auto;
+}
+.gallery-container{
+    margin: 0 150px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+.gallery-img{
+    width: calc(25.333% - 15px);
+    height: auto;
+}
+.gallery-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artist{
+    height: auto;
+}
+/*ARTISTのProfile設定(共通)-構成及び位置指定-*/
+.profile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+/*ARTISTのProfile設定(共通)-写真の設定-*/
+.profile img{
+    border-radius: 50%;
+    width:  400px;
+    height: 400px; 
+}
+/*ARTISTのProfile設定(共通)-紹介文の設定-*/
+.profile p{
+    font-size: 40px;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    line-height: 1.5;
+}
+.price{
+    width: 100%;
+    padding-bottom: 50px;
+}
+.price-table{
+    font-family: 'Times New Roman';
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 40px;
+    border-collapse: collapse;
+}
+.price-table th{
+    font-size: 60px;
+    background-color:rgba(0, 0, 0, 0.3)
+}
+.price-table td{
+    font-size: 35px;
+    padding: 50px;
+    
+}
+.access{
+    height: 700px;
+}
+.access-title{
+    margin-top: 0px;
+}
+.access-map{
+    width: 100%;
+    height: 100%;
+}
+.access-map iframe{
+    margin: 0 0;
+    height: 100%;
+    width: 100%;
+}
+.shop-address{
+    width: 100%;
+}
+
+.shop-address p{
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.map-title{
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1034px) {
+    .body{
+        width: 100%;
+    }
+    .header-title{
+        padding-right: 0px;
+        padding-left: 15px;
+    }
+    .header-menu{
+        font-size: 18px;
+    }
+    .header-menu ul{
+        padding-left: 0px;
+        padding-right: 15px;
+    }
+    .header-menu li{
+        padding: 10px;
+    }
+    .video-text{
+        font-size: 200%;
+    }
+    .profile{
+        gap: 100px;
+    }
+    .profile img{
+        width:  300px;
+        height: 300px; 
+    }
+    .price-table{
+        width: 70%;
+    }
+    .price-table th{
+        font-size: 45px;
+    }
+    .price-table td{
+        font-size: 30px;
+        padding: 30px;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    .gallery-container{
+        margin: 50px;
+    }
+    .video-text{
+        font-size: 250%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header-title{
+        font-size: 25px;
+        width: 100%;
+        justify-content: left;
+        gap: 0;
+        margin-left: 25px;
+        padding: 0px 0px 0px 0px;
+    }
+    .header-menu{
+        display: none;
+    }
+    .nav-wrapper{
+        display: inline;
+    }
+    .hamburger{
+        border-radius: 50%;
+        background-color: aliceblue;
+        position: fixed;
+        height: 55px;
+        right: 10px;
+        top: 20px;
+        width:55px;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    .sp-nav{
+        background-image: url("../shop.png/backgroundimg.png");
+        position: fixed;
+        top: 0;
+        width: 50%;
+        right: -100%;
+        height: 100%;
+        z-index: 200;
+        background-color:black;
+        transition: all 0.5s;
+        overflow-y: auto;
+    }
+    .open .sp-nav {
+        right: 0;
+    }
+    .black-bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color:black;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .open .black-bg {
+        opacity: 0.5;
+        visibility: visible;
+    }
+    .hamburger__line{
+        position: fixed;
+        width: 35px;
+        height: 5px;
+        right: 20px;
+        background-color:black;
+        transition: all 0.5s;
+    }
+    .hamburger__line1 {
+        top: 34px;
+    }
+    .hamburger__line2 {
+        top: 44px;
+    }
+    .hamburger__line3 {
+        top: 54px;
+    }
+    .open .hamburger__line1 {
+        transform: rotate(-45deg);
+        top: 45px;
+    }
+    .open .hamburger__line2 {
+        opacity: 0;
+    }
+    .open .hamburger__line3 {
+        transform: rotate(45deg);
+        top: 45px;
+    }
+    .nav-title{
+        color: aliceblue;
+        margin-top: 100px;
+        font-size: 35px;
+        font-family: 'Times New Roman';
+        text-align: center;
+        font-weight: bold;
+    }
+    .sp-nav ul{
+        color: aliceblue;
+        font-family: 'Times New Roman';
+        margin-top: 150px;
+        margin-left: 0;
+        padding-left: 0;
+        height: auto;
+        list-style: none;
+        font-size: 30px;
+        align-items: center;
+        text-align: center;
+    }
+    .sp-nav li{
+        margin: 0 20px;
+        margin-bottom: 30px;
+        padding: 10px 0px;
+    }
+    .main-video{
+        font-size: 10px;
+    }
+    .main-video{
+        height: 600px;
+    }
+    .video-text{
+        font-size: 20%;
+    }
+    .title{
+        font-size: 30px;
+        margin: 0px 0px;
+    }
+    .design img{
+        width: 50%;
+    }
+    .gallery{
+        width: 100%;
+        padding: 50px 0px;
+        overflow: hidden;
+    }
+    .gallery-container{
+        margin: 20px;
+    }
+    .gallery-img{
+        width: calc(50.333% - 15px);
+        height: auto;
+    }
+    .profile{
+        gap: 30px;
+        padding-bottom: 50px;
+    }
+    .profile p{
+        font-size: 15px;
+    }
+    .profile img{
+        width:  150px;
+        height: 150px; 
+    }
+    .shop-address p{
+        font-size: 14px;
+    }
+    .artist{
+        padding-top: 40px;
+    }
+    .price-table{
+        width: 70%;
+    }
+    .price-table th{
+        font-size: 50px;
+    }
+    .price-table td{
+        font-size: 20px;
+        padding: 25px;
+    }
+    .price-table{
+        width: 80%;
+    }
+
+    .price-table th{
+        font-size: 25px;
+    }
+    .price-table td{
+        font-size: 15px;
+        padding: 15px;
+    }
+
+
+}
+
+
