@@ -8,6 +8,8 @@ html ,body{
     height:100%;
     width: 100%;
     -webkit-text-size-adjust: 100%; /* iOS Safariの自動拡大防止 */
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 .header {
@@ -49,6 +51,10 @@ html ,body{
 .header-menu li{
     margin-top: 0px;
     padding: 0px 20px;
+}
+.header-menu a{
+    color: aliceblue;
+    text-decoration: none;
 }
 
 .main-video{
@@ -259,6 +265,9 @@ html ,body{
         margin-left: 25px;
         padding: 0px 0px 0px 0px;
     }
+    .video-text p{
+        font-size: 1500%;
+    }
     .header-menu{
         display: none;
     }
@@ -361,6 +370,10 @@ html ,body{
         margin: 0 20px;
         margin-bottom: 30px;
         padding: 10px 0px;
+    }
+    .sp-nav a{
+        color: aliceblue;
+        text-decoration: none;
     }
     .main-video{
         font-size: 10px;
